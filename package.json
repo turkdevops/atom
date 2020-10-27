@@ -33,14 +33,14 @@
     "autocomplete-snippets": "https://www.atom.io/api/packages/autocomplete-snippets/versions/1.12.1/tarball",
     "autoflow": "file:packages/autoflow",
     "autosave": "https://www.atom.io/api/packages/autosave/versions/0.24.6/tarball",
-    "babel-core": "5.8.38",
+    "babel-core": "6.10.4",
     "background-tips": "https://www.atom.io/api/packages/background-tips/versions/0.28.0/tarball",
     "base16-tomorrow-dark-theme": "file:packages/base16-tomorrow-dark-theme",
     "base16-tomorrow-light-theme": "file:packages/base16-tomorrow-light-theme",
     "bookmarks": "https://www.atom.io/api/packages/bookmarks/versions/0.46.0/tarball",
     "bracket-matcher": "https://www.atom.io/api/packages/bracket-matcher/versions/0.91.2/tarball",
     "chai": "4.2.0",
-    "chart.js": "^2.3.0",
+    "chart.js": "^2.9.4",
     "clear-cut": "^2.0.2",
     "coffee-script": "1.12.7",
     "color": "3.1.2",
@@ -121,7 +121,7 @@
     "marked": "1.2.0",
     "metrics": "https://www.atom.io/api/packages/metrics/versions/1.8.1/tarball",
     "minimatch": "^3.0.3",
-    "mocha": "6.2.3",
+    "mocha": "8.2.0",
     "mocha-junit-reporter": "2.0.0",
     "mocha-multi-reporters": "^1.1.4",
     "mock-spawn": "^0.2.6",
@@ -168,7 +168,8 @@
     "whitespace": "https://www.atom.io/api/packages/whitespace/versions/0.37.7/tarball",
     "winreg": "^1.2.1",
     "wrap-guide": "https://www.atom.io/api/packages/wrap-guide/versions/0.41.0/tarball",
-    "yargs": "^16.0.3"
+    "yargs": "^16.0.3",
+    "snyk": "^1.420.1"
   },
   "packageDependencies": {
     "atom-dark-syntax": "file:./packages/atom-dark-syntax",
@@ -268,7 +269,9 @@
   "private": true,
   "scripts": {
     "preinstall": "node -e 'process.exit(0)'",
-    "test": "node script/test"
+    "test": "node script/test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "standard-engine": "./script/node_modules/standard",
   "standard": {
@@ -282,5 +285,6 @@
       "atom",
       "snapshotResult"
     ]
-  }
+  },
+  "snyk": true
 }
