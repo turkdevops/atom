@@ -169,7 +169,7 @@
     "winreg": "^1.2.1",
     "wrap-guide": "https://www.atom.io/api/packages/wrap-guide/versions/0.41.0/tarball",
     "yargs": "^16.2.0",
-    "snyk": "^1.420.1"
+    "snyk": "^1.440.1"
   },
   "packageDependencies": {
     "atom-dark-syntax": "file:./packages/atom-dark-syntax",
