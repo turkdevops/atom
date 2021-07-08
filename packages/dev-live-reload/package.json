@@ -12,7 +12,7 @@
     "atom": "*"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "standard": "^11.0.0"
   },
   "standard": {
     "env": {
